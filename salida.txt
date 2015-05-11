@@ -1,0 +1,4 @@
+Para calcular el perimetro de un rectangulo en cm
+Ingrese la altura: 3
+Ingrese la base: 7
+El perimetro es 20 cm 
