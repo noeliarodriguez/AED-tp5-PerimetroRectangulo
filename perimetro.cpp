@@ -13,28 +13,30 @@ using namespace std;
 
 //Declaracion de funciones
 
-double getNumPositivo();
+
 double getPerimetro(double, double);
+double getNumPositivo();
+
 
 //Programa principal
 int main()
 {
-	double altura;
-	double base;
-	
 	cout << "Para calcular el perimetro de un rectangulo en cm" <<endl << "Ingrese la altura: ";
-	cin >> altura;
+	double altura = getNumPositivo();
 	cout << "Ingrese la base: ";
-	cin >> base;
+	double base = getNumPositivo();
 	cout << endl << "El perimetro es " << getPerimetro(altura,base) << " cm "<< endl;
 	
 	}
 
 double getNumPositivo(){
 	double num;
-	while (num <= 0){
-	cin >> num; 
-		}
+	cin >> num;
+	while (num <=0){
+		cout << "Escriba un numero positivo"<< endl;
+		cin >> num;
+	}
+	return num;
 	}
 double getPerimetro(double h, double b){
 	double perimetro = (h+b)*2;
